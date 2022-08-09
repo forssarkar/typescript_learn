@@ -1,51 +1,24 @@
-// explicit type
+let age: any = 25;
 
-let character: string = 'mario';
-let age: number;
-let isLoggedIn: boolean;
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = { name: 'luigi' };
+console.log(age);
 
-// age = 'luigi';
-age = 30;
+let mixed: any[] = [];
 
-// isLoggedIn = 25;
-isLoggedIn = true;
-
-// arrays
-//let ninjas: string[];
-
-//ninjas =["ss", "suman"]
-// ninjas = [10,20] , number not allowed
-
-// Declaration with empty value, we can use push method
-let ninjas: string[] = []; 
-
-ninjas.push('ryu');
-ninjas.push('chun-li');
-console.log(ninjas);
-
-// union types
-let mixed: (string|number|boolean)[] = [];
-mixed.push('hello');
+mixed.push(5);
+mixed.push('mario');
 mixed.push(false);
-mixed.push(20);
 console.log(mixed);
 
+let ninja: { name: any, age: any };
 
-let uid: string|number;
+ninja = { name: 'yoshi', age: 25 };
+console.log(ninja);
 
-uid = "susanta"
-uid = 30
+ninja = { name: 25, age: 'yoshi' };
+console.log(ninja);
 
-// objects
-let ninjaOne: object; 
-ninjaOne = { 
-           name: 'yoshi', 
-           age: 30 };
-
-let ninjaTwo: {
-            name: string,
-            age: number,
-            beltColour: string
-};
-
-ninjaTwo = { name: 'ken', age: 20, beltColour: 'black' };

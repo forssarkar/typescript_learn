@@ -1,3 +1,3 @@
 # typescript_learn
 
-Lesson 5 : Explicit Type
+Lesson 6 : Dynamic Type
