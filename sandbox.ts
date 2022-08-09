@@ -1,37 +1,51 @@
+// explicit type
+
+let character: string = 'mario';
+let age: number;
+let isLoggedIn: boolean;
+
+// age = 'luigi';
+age = 30;
+
+// isLoggedIn = 25;
+isLoggedIn = true;
+
 // arrays
-let names = ['luigi', 'mario', 'yoshi'];
+//let ninjas: string[];
 
-names.push('toad');
-// names.push(3);
-// names[1] = 3;
+//ninjas =["ss", "suman"]
+// ninjas = [10,20] , number not allowed
 
-let numbers = [10, 20, 12, 15];
+// Declaration with empty value, we can use push method
+let ninjas: string[] = []; 
 
-numbers.push(25);
-// numbers.push('shaun');
-// numbers[0] = 'shaun';
+ninjas.push('ryu');
+ninjas.push('chun-li');
+console.log(ninjas);
 
-let mixed = ['ken', 4, 'chun-li', 8, 9];
+// union types
+let mixed: (string|number|boolean)[] = [];
+mixed.push('hello');
+mixed.push(false);
+mixed.push(20);
+console.log(mixed);
 
-mixed.push('ryu');
-mixed.push(10);
-mixed[0] = 3;
+
+let uid: string|number;
+
+uid = "susanta"
+uid = 30
 
 // objects
-let ninja = {
-  name: 'mario',
-  belt: 'black',
-  age: 30
+let ninjaOne: object; 
+ninjaOne = { 
+           name: 'yoshi', 
+           age: 30 };
+
+let ninjaTwo: {
+            name: string,
+            age: number,
+            beltColour: string
 };
 
-ninja.age = 40;
-ninja.name = 'ryu';
-// ninja.age = '30';
-//ninja.skills = ['fighting', 'sneaking'] Extra Property
-
-ninja = {
-  name: 'yoshi',
-  belt: 'orange',
-  age: 40,
-  // skills: ['running'],
-};
+ninjaTwo = { name: 'ken', age: 20, beltColour: 'black' };

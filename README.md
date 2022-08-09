@@ -1,3 +1,3 @@
 # typescript_learn
 
-Lesson 3 : Objects and Array
+Lesson 5 : Explicit Type
