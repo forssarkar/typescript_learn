@@ -1,3 +1,3 @@
 # typescript_learn
 
-Lesson 6 : Dynamic Type
+Lesson 8 : Function Basic
