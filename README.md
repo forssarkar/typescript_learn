@@ -1,3 +1,3 @@
 # typescript_learn
 
-Lesson 8 : Function Basic
+Lesson 9 : Alias , Create your own type.

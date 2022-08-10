@@ -1,33 +1,31 @@
-let greet : Function ;
+type StringOrNum = string| number ;
+type objWithString = {name : string , uid : string | number}
 
-// Function 
-greet = () => {
-    console.log("Greet Function")
+
+const logDetails = (uid : string | number , item:string ) => {
+    console.log("${item} has uid of {uid}")
 }
 
-// Call the Function 
-greet()
-// Function with Parameter , cis optional , mark with ?
-let add = (a:number , b: number , c?: number | string ) => {
-    console.log(a+b)
-    console.log(c)
+const greet = (
+    user : {
+         name : string ,
+         uid : string | number
+    } )  => {
+        console.log("%s has uid of %d" , user.name, user.uid )
 }
 
-add(5,4)
+greet( {name :"Susanta", uid: 20})
 
-// Function with Parameter, c is optional with default value = 10
-let add1 = (a:number , b: number , c: number | string = 10 ) => {
-    console.log(a+b)
-    console.log(c)
+// Use your own type
+const logDetailsv1 = (uid : StringOrNum , item:string) => {
+    console.log( item + " has uid of " + uid)
 }
 
-add1(15,4)
+logDetailsv1(20,"ss");
 
-// Function with Parameter, retun is number
-let add3 = (a:number , b: number ) : number => {
-    return a+b ;
+
+const greet1 = ( user : objWithString )  => {
+        console.log(user.name )
 }
 
-let sum = add3(100,200)
-
-console.log(sum)
+greet1( {name :"Suman", uid: 18})
