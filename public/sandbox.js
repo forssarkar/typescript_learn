@@ -1,17 +1,23 @@
 "use strict";
-const logDetails = (uid, item) => {
-    console.log("${item} has uid of {uid}");
+// Function Signature
+// let greet: Function;
+// example 1
+let greet;
+greet = (name, greeting) => {
+    console.log(`${name} says ${greeting}`);
 };
-const greet = (user) => {
-    console.log("%s has uid of %d", user.name, user.uid);
+// example 2
+let calc;
+calc = (numOne, numTwo, action) => {
+    if (action === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-greet({ name: "Susanta", uid: 20 });
-// Use your own type
-const logDetailsv1 = (uid, item) => {
-    console.log(item + " has uid of " + uid);
+// example 3
+let logDetails;
+logDetails = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
 };
-logDetailsv1(20, "ss");
-const greet1 = (user) => {
-    console.log(user.name);
-};
-greet1({ name: "Suman", uid: 18 });

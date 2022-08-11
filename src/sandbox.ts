@@ -1,31 +1,28 @@
-type StringOrNum = string| number ;
-type objWithString = {name : string , uid : string | number}
+// Function Signature
 
+// let greet: Function;
 
-const logDetails = (uid : string | number , item:string ) => {
-    console.log("${item} has uid of {uid}")
+// example 1
+let greet: (a: string, b: string) => void;
+
+greet = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting}`);
 }
 
-const greet = (
-    user : {
-         name : string ,
-         uid : string | number
-    } )  => {
-        console.log("%s has uid of %d" , user.name, user.uid )
+// example 2
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) => {
+  if (action === 'add') {
+    return numOne + numTwo;
+  } else {
+    return numOne - numTwo;
+  }
 }
 
-greet( {name :"Susanta", uid: 20})
+// example 3
+let logDetails: (obj: {name: string, age: number}) => void;
 
-// Use your own type
-const logDetailsv1 = (uid : StringOrNum , item:string) => {
-    console.log( item + " has uid of " + uid)
+logDetails = (ninja: {name: string, age: number}) => {
+  console.log(`${ninja.name} is ${ninja.age} years old`);
 }
-
-logDetailsv1(20,"ss");
-
-
-const greet1 = ( user : objWithString )  => {
-        console.log(user.name )
-}
-
-greet1( {name :"Suman", uid: 18})
