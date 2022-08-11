@@ -1,10 +1,27 @@
 "use strict";
 // class 
+// class Invoice {
+//   readonly client: string;
+//   private details: string;
+//   public amount: number;
+//   constructor(c: string, d: string, a: number){
+//     this.client = c;
+//     this.details = d;
+//     this.amount = a;
+//     }
+//     format() {
+//       return `${this.client} owes £${this.amount} for ${this.details}` ;
+//     }
+// }
+// If Access modifier is in use , alternate way to create the class as below.
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} owes £${this.amount} for ${this.details}`;
@@ -17,6 +34,10 @@ let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 console.log(invoices);
+invoices.forEach(inv => {
+    inv.amount = 100000;
+    console.log(inv.client, /*inv.details, */ inv.amount, inv.format());
+});
 const form = document.querySelector('.new-item-form');
 //console.log(form.children);
 // inputs
