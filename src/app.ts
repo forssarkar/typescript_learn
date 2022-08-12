@@ -1,20 +1,32 @@
-// // If Access modifier is in use , alternate way to create the class as below.
-// class Invoice {
-//   // readonly client: string;
-//   // private details: string;
-//   // public amount: number;
+interface IsPerson {
+  name : string ,
+  age : number ,
+  speak(a:string) : void,
+  spend(a:number) : number
+}
 
-//   constructor(
-//     readonly client : string ,
-//     private details: string,
-//     public amount: number,
-//   ){}
+const me : IsPerson = {
+   name : 'Sunanta',
+   age  : 52,
+   speak(text : string) :void {
+      console.log(text) ;
+   } ,
+   spend(amount : number) : number {
+      console.log(amount) ;
+      return amount;
+   }
+}
 
-//     format() {
-//       return `${this.client} owes £${this.amount} for ${this.details}` ;
+me.name = "ff"
+me.speak("Hello English")
+console.log(me.name)
 
-//     }
-// }
+const greatPerson= (person : IsPerson) => {
+     console.log(person.name) ;
+}
+
+me.name = "Suman"
+greatPerson(me) ;
 
 import {Invoice} from "./classes/invoice.js"
 

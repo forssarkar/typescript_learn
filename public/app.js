@@ -1,17 +1,22 @@
-// // If Access modifier is in use , alternate way to create the class as below.
-// class Invoice {
-//   // readonly client: string;
-//   // private details: string;
-//   // public amount: number;
-//   constructor(
-//     readonly client : string ,
-//     private details: string,
-//     public amount: number,
-//   ){}
-//     format() {
-//       return `${this.client} owes £${this.amount} for ${this.details}` ;
-//     }
-// }
+const me = {
+    name: 'Sunanta',
+    age: 52,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log(amount);
+        return amount;
+    }
+};
+me.name = "ff";
+me.speak("Hello English");
+console.log(me.name);
+const greatPerson = (person) => {
+    console.log(person.name);
+};
+me.name = "Suman";
+greatPerson(me);
 import { Invoice } from "./classes/invoice.js";
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
