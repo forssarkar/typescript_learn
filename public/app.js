@@ -25,3 +25,39 @@ form.addEventListener('submit', (e) => {
     list.render(doc, type.value, 'end');
     //console.log(doc)
 });
+//GENERIS 
+//   const addUID = ( obj : object) => {
+//     let uid = Math.floor(Math.random() * 100);
+//     return {...obj, uid};
+//   }
+// let docOne = addUID({name : "susanta", age : 50})
+// console.log(docOne)
+//   const addUID = <T>( obj : T) => {
+//     let uid = Math.floor(Math.random() * 100);
+//     return {...obj, uid};
+//   }
+// let docOne = addUID({name : "susanta", age : 50})
+// console.log(docOne.name)
+//   const addUID = <T extends object>( obj : T) => {
+//     let uid = Math.floor(Math.random() * 100);
+//     return {...obj, uid};
+//   }
+// let docOne = addUID({name : "susanta", age : 50})
+// console.log(docOne.name)
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docOne = addUID({ name: "susanta", age: 50 });
+console.log(docOne.name);
+const docThree = {
+    uid: 1,
+    resourceName: 'person',
+    data: { name: 'shaun' }
+};
+const docFour = {
+    uid: 1,
+    resourceName: 'shoppingList',
+    data: ['bread', 'milk']
+};
+console.log(docThree, docFour);
