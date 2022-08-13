@@ -19,14 +19,19 @@ const list = new ListTemplate(ul);
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
   
+    // TUPLES
+    let values : [string,string,number] = [tofrom.value, details.value, amount.valueAsNumber]
+
+    console.log(...values)
+
     let doc: HasFormatter;
 
     if (type.value === "invoice"){
    //     console.log("Invoice")
-        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     } else {
      // console.log("Payment")
-        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+        doc = new Payment(...values);
     }
     list.render(doc, type.value, 'end');
     //console.log(doc)
@@ -66,7 +71,7 @@ const addUID = <T extends {name: string}>(obj: T) => {
 }
 
 let docOne = addUID({name : "susanta", age : 50})
-console.log(docOne.name)
+//console.log(docOne.name)
 
 interface Resource <T>{
     uid : number ,
@@ -86,7 +91,7 @@ const docFour: Resource<string[]> = {
   data: ['bread', 'milk']
 };
 
-console.log(docThree, docFour);
+//console.log(docThree, docFour);
 
 // ENUMS
 
@@ -111,3 +116,18 @@ const docFive: Resource_v1<object> = {
 
 console.log(docTwo);
 console.log(docFive);
+
+// TUPLES
+let arr = ['ryu', 25, true];
+arr[0] = false;
+arr[1] = 'yoshi';
+arr = [30, false, 'yoshi'];
+
+let tup: [string, number, boolean] = ['ryu', 25, true];
+// tup[0] = false;
+tup[0] = 'ken';
+
+let student: [string, number];
+//student = [23564, 'chun-li'];
+student = ['chun-li', 23564];
+
